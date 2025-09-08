@@ -1,3 +1,73 @@
-# Python virtual environments
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Virtual environments ---
 venv/
 .venv/
+env/
+ENV/
+
+# --- Python bytecode / caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytype/
+.pylint.d/
+.cache/
+
+# --- Test / coverage / tooling ---
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# --- Build artifacts ---
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+__pypackages__/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+.jupyter/
+
+# --- Env & secrets (keep these out of git) ---
+.env
+.env.*
+.envrc
+.secrets/
+secrets.*
+*.pem
+*.key
+*.crt
+
+# --- Logs & temp ---
+*.log
+logs/
+tmp/
+temp/
+
+# --- Editors/IDEs ---
+.vscode/
+*.code-workspace
+.idea/
+
+# --- Databases / local data dumps ---
+*.sqlite3
+*.db
+
+# --- Optional: if you bind-mount local Postgres data, uncomment one:
+# data/
+# db/

@@ -30,7 +30,13 @@ DEFAULT_TICKER_MAP = {
     "btc": "X:BTCUSD",
     "eth": "X:ETHUSD",
     "sol": "X:SOLUSD",
+    "sui": "X:SUIUSD",
+    "link": "X:LINKUSD",
+    "avax": "X:AVAXUSD",
+    "xrp": "X:XRPUSD",
+    "doge": "X:DOGEUSD",
 }
+
 POLYGON_BASE_URL = "https://api.polygon.io"
 # DB connection defaults (override with env)
 PGHOST = os.getenv("PGHOST", "localhost")
@@ -187,7 +193,8 @@ def parse_allocations(alloc_json_str: str) -> Tuple[List[str], date, date]:
     })
 
     # Range
-    dates = sorted(pd.to_datetime([row["date"] for row in alloc]).dt.date.tolist())
+    dates = sorted(datetime.fromisoformat(row["date"]).date() for row in alloc)
+    
     return asset_keys, dates[0], dates[-1]
 
 
