@@ -1,0 +1,10 @@
+# Core
+pandas>=2.0,<3
+numpy>=1.24,<3
+requests>=2.31,<3
+
+# Postgres driver (binary wheels; easiest on Windows/macOS)
+psycopg2-binary>=2.9,<3
+
+# Needed only on Python < 3.11
+typing_extensions>=4.7; python_version < "3.11"
